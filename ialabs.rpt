@@ -1,0 +1,11 @@
+﻿id          name                 email                salary
+----------- -------------------- -------------------- ---------------------------------------
+1           manish               manish@gmail.com     20000
+1           manish               manish@gmail.com     20000
+1           manish               manish@gmail.com     20000
+1           manish               manish@gmail.com     20000
+
+(4 rows affected)
+
+
+Completion time: 2022-08-02T10:54:51.8328329+05:30
