@@ -1,0 +1,98 @@
+create database eccomerce
+use eccomerce
+
+create table products(id int primary key identity(100,1),name nvarchar(20),brand nvarchar(20),quantity numeric(20))
+insert into products values('Mobile','Oneplus',567)
+insert into products values('mobile','apple',1000)
+insert into products values('mobile','samsung',657)
+insert into products values('speakers','Boat',879)
+insert into products values('speakers','sony',768)
+insert into products values('smart watches','fossil',234)
+insert into products values('smart watches','boat',786)
+insert into products values('smart watches','samsung',987)
+insert into products values('laptop','dell',578)
+insert into products values('laptop','hp',799)
+
+select * from products
+drop table products
+
+create table customer(id int primary key identity(100,1),customer_name nvarchar(20),address nvarchar(20),age numeric(20))
+insert into customer values('Mudit','delhi',23)
+insert into customer values('kuldeep','nangloi',22)
+insert into customer values('manish','bihar',24)
+insert into customer values('rishabh','jamshedpur',28)
+insert into customer values('abhinav','banaras',32)
+insert into customer values('saurabh','noida',28)
+insert into customer values('rohit','gurugram',40)
+insert into customer values('shobit','delhi',21)
+insert into customer values('vishrut','ghaziabad',19)
+insert into customer values('anurag','greater noida',45)
+
+select * from customer
+drop table customer
+
+create table orders(id int primary key identity(100,1),OrderedBy nvarchar(20), status nvarchar(20))
+insert into orders values('Mudit','Out for Delivery')
+insert into orders values('kuldeep','packing')
+insert into orders values('manish','Out for Delivery')
+insert into orders values('rishabh','Arriving soon')
+insert into orders values('abhinav','Out for Delivery')
+insert into orders values('saurabh','packing')
+insert into orders values('rohit','packing')
+insert into orders values('shobit','Out for Delivery')
+insert into orders values('vishrut','packing')
+insert into orders values('anurag','Arriving soon')
+
+select * from orders
+drop table orders
+
+create table accounts(id int primary key identity(100,1),amount numeric(20),balance_Left numeric(20))
+insert into accounts values(25000,657)
+insert into accounts values(986666,9)
+insert into accounts values(65000,27)
+insert into accounts values(23000,65)
+insert into accounts values(87666,788)
+insert into accounts values(31000,90)
+insert into accounts values(7655,6231)
+insert into accounts values(2400,43)
+insert into accounts values(87999,7762)
+insert into accounts values(98777,0)
+
+select * from accounts
+drop table accounts
+
+CREATE VIEW CUSTOMER_VIEW
+AS
+select name,brand,customer_name
+from products  p
+,customer  c where
+p.id = c.id
+
+select * from CUSTOMER_VIEW
+
+CREATE VIEW Order_VIEW
+AS
+select customer_name,address,status
+from customer  c 
+,orders o where
+c.id = o.id
+
+select * from Order_VIEW
+
+CREATE VIEW Account_VIEW
+AS
+select customer_name,address ,age,amount,balance_Left
+from customer c
+,accounts  a where
+c.id = a.id
+
+select * from Account_VIEW
+
+CREATE VIEW Products_VIEW
+AS
+select OrderedBy ,name,brand,status
+from products  p
+, orders  o where
+p.id = o.id
+
+select * from Products_VIEW
