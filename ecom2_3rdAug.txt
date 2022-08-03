@@ -1,0 +1,66 @@
+create database ecom_3rdAUG
+use ecom_3rdAUG
+
+create table products(P_id int primary key identity(1,1),name nvarchar(20),brand nvarchar(20),quantity numeric(20))
+insert into products values('smart watches','samsung',987)
+insert into products values('speakers','sony',768)
+insert into products values('mobile','apple',1000)
+insert into products values('mobile','samsung',657)
+insert into products values('speakers','Boat',879)
+insert into products values('Mobile','Oneplus',567)
+insert into products values('smart watches','fossil',234)
+insert into products values('smart watches','boat',786)
+
+select * from products
+drop table products
+
+create table customer(C_id int primary key identity(1,1),customer_name nvarchar(20),address nvarchar(20),age numeric(20),balance_left numeric(18,0))
+insert into customer values('Mudit','delhi',21,659)
+insert into customer values('saurabh','noida',32,98)
+insert into customer values('Mudit','delhi',45,0)
+insert into customer values('kuldeep','nangloi',22,65)
+insert into customer values('manish','bihar',24,253)
+insert into customer values('kuldeep','nangloi',28,65)
+insert into customer values('Mudit','delhi',23,0)
+insert into customer values('saurabh','noida',28,98)
+
+
+select * from customer
+drop table customer
+
+create table orders(O_id int primary key identity (100,1),OrderedBy nvarchar(20), status nvarchar(20),amount numeric(20),C_id int,
+CONSTRAINT fk_orders_C_id
+FOREIGN KEY(C_id)
+REFERENCES customer(C_id))
+
+insert into orders values('Mudit','Out for Delivery',7999,1)
+insert into orders values('saurabh','Out for Delivery',10000,2)
+insert into orders values('Mudit','Arriving soon',87999,3)
+insert into orders values('kuldeep','Arriving soon',45654,4)
+insert into orders values('manish','Out for Delivery',87999,5)
+insert into orders values('kuldeep','Arriving soon',34000,6)
+insert into orders values('Mudit','Out for Delivery',50000,7)
+insert into orders values('saurabh','Arriving soon',15000,8)
+
+
+select * from orders
+drop table orders
+
+--Groupby clause
+
+select customer_name,sum(balance_left) as 'Total Balance Left' 
+from customer group by customer_name
+
+--HAVING CLAUSE
+
+select customer_name,sum(balance_left) as 'Total Balance Left' 
+from customer group by customer_name having sum(balance_left)>200
+
+select customer_name,sum(balance_left) as 'Total Balance Left' 
+from customer group by customer_name having sum(balance_left)<200
+
+--ORDER BY CLAUSE
+
+select * from orders order by len(OrderedBy) desc
+
+select * from orders order by len(OrderedBy)
