@@ -1,0 +1,79 @@
+<!DOCTYPE html>  
+<head>  
+  <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <!-- dragable -->
+
+  <!-- <style>  
+  #aa { color: rgb(0, 38, 255); width: 100px; height: 100px; padding: 0.5em; background:#000000;}
+  
+  /* hide */
+  .toggler-1 { width: 500px; height: 200px; }  
+            #button-1 { padding: .5em 1em; text-decoration: none; }  
+            #effect-1 { width: 240px; height: 160px; padding: 0.4em; position: relative; }  
+            #effect-1 h3 { margin: 0; padding: 0.4em; text-align: center; }  
+  
+  </style>   -->
+
+
+
+ <!-- hide -->
+
+  <script>
+  $(document).ready(function(){
+    $("#hide").click(function(){
+      $("#pid1").hide();
+    });
+    $("#show").click(function(){
+    $("#pid1").show();
+    });
+
+    $("#toggle").click(function(){
+      $("#pid1").toggle();
+    });
+
+    $("#fade").click(function(){
+      $("p").fadeToggle();
+    });
+
+    $("#slideup").click(function(){
+      $("#pid1").slideToggle();
+    });
+
+    $("#animate").click(function(){
+      $("#pid1").animate({left: '500px'});
+    });
+  });
+  </script>  
+</head>  
+<body>  
+  <div>
+    <p id="pid1">Hello there</p>
+    <p>Today we are going to learn effects</p>
+    <p><b>Click the below button to know about effects</b></p>
+    <button id="hide">Hide</button> 
+    <button id="show">show</button> 
+    <button id="toggle">toggle</button> 
+    <button id="fade">Fade</button>
+    <button id="slideup">slideup</button>
+    <button id="animate">animate</button>
+  </div>
+
+
+     <!-- <div id="aa" class="ui-widget-content">  
+      <p>Drag Meeeeee!</p>  
+     </div>   -->
+
+      <!-- accordion widget -->
+     <!-- <div id="accordion">
+      <h3>Best places to travel</h3>
+      <div>
+        <p>
+          the best places are manali,mussorie,haridwar etc.
+        </p>
+      </div>
+     </div> -->
+</body>  
+</html>  
