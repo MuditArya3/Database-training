@@ -1,1 +1,31 @@
-<app-component1></app-component1>
+<a [routerLink]="['/schoollink']">school</a>                                 ||
+<a [routerLink]="['/school-detailslink']">Get School details</a>
+
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<table border="2px">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Branch</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let stu of school">
+    <td>{{stu.ID}}</td>
+    <td>{{stu.Name}}</td>
+    <td>{{stu.Branch}}</td>
+    <td>{{stu.Gender}}</td>
+   </tr>
+   <tr *ngIf="!school || school.length==0">
+    <td colspan="4">
+      No Students to display
+    </td>
+   </tr>
+  </tbody>
+</table>
