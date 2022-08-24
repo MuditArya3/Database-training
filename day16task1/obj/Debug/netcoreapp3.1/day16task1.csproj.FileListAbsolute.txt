@@ -1,0 +1,14 @@
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\bin\Debug\netcoreapp3.1\day16task1.exe
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\bin\Debug\netcoreapp3.1\day16task1.deps.json
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\bin\Debug\netcoreapp3.1\day16task1.runtimeconfig.json
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\bin\Debug\netcoreapp3.1\day16task1.runtimeconfig.dev.json
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\bin\Debug\netcoreapp3.1\day16task1.dll
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\bin\Debug\netcoreapp3.1\day16task1.pdb
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.csproj.AssemblyReference.cache
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.AssemblyInfoInputs.cache
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.AssemblyInfo.cs
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.csproj.CoreCompileInputs.cache
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.dll
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.pdb
+C:\Users\Mudit.Arya\source\repos\project1\day16task1\obj\Debug\netcoreapp3.1\day16task1.genruntimeconfig.cache
